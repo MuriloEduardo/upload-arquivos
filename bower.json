@@ -1,0 +1,10 @@
+{
+  "name": "upload-arquivos",
+  "description": "",
+  "main": "server.js",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "angular": "^1.5.7"
+  }
+}

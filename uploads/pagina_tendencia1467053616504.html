@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+	html,body{ margin: 0; font-family: 'Roboto', sans-serif; }
+	.foo{
+		-webkit-transform: skew(0deg, 3deg); 
+		-moz-transform: skew(0deg, 3deg); 
+		-o-transform: skew(0deg, 3deg);
+		height: 100px;
+		width: 100%;
+		background-color: #D3393B;
+	}
+	.noo{
+		-webkit-transform: skew(0deg, -3deg); 
+		-moz-transform: skew(0deg, -3deg); 
+		-o-transform: skew(0deg, -3deg);
+		height: 100px;
+		width: 100%;
+		background-color: #D3393B;
+	}
+	.container{
+		width: 100%;
+		height: 600px;
+		background-color: #D3393B;
+		margin: -50px 0;
+	}
+	.bg-img{
+		background-image:linear-gradient(
+            rgba(211,57,59,.7),
+            rgba(211,57,59,.7)
+            ),
+        url(http://hd.freewallpaper-s.net/wp-content/uploads/mixed/Home-office-macbook-air-iphone-glass-table-cool-2560x1440.jpg);
+		height: 700px;
+		margin-bottom: -40px;
+		background-attachment: fixed;
+		background-position: 50% 0;
+		-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+	.noo-two{
+		margin-top: -35px;
+		height: 350px;
+		width: 100%;
+		background-image:linear-gradient(
+            rgba(255,255,255,.7),
+            rgba(255,255,255,.7)
+            ),
+        url(http://hd.freewallpaper-s.net/wp-content/uploads/mixed/Home-office-macbook-air-iphone-glass-table-cool-2560x1440.jpg);
+		background-attachment: fixed;
+		background-position: 50% 0;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	    padding-top: 60px;
+	    text-align: center;
+	}
+	.container-two{
+		height: 400px;
+	}
+	.noo-three{
+		-webkit-transform: skew(0deg, -3deg); 
+		-moz-transform: skew(0deg, -3deg); 
+		-o-transform: skew(0deg, -3deg);
+		height: 100px;
+		width: 100%;
+		background-color: #FFF;
+		margin-top: -35px;
+	}
+	.four{
+		background-color: #b1b1b1;
+	}
+	.up{
+		text-transform: uppercase;
+		font-size: 50px;
+		font-weight: bold;
+		text-align: center;
+	}
+	.noo-two h1{
+		color: #282828;
+		margin-bottom: 10px;
+	}
+	.noo-two h2{
+		font-weight: 400;
+		color: #282828;
+		margin-bottom: 10px;
+	}
+	.separa-detalhe{
+		width: 50%;
+		margin: auto;
+		float: none;
+	}
+	.separa-detalhe .line{
+		height: 1px;
+		background-color: rgba(40,40,40,.4);
+		width: 45%;
+		margin-top: 10px;
+	}
+	.separa-detalhe i{
+		width: 10%;
+		color: #D3393B;
+		font-size: 20px;
+	}
+	.left-detalhe{ float: left; }
+	.right-detalhe{ float: right; }
+	.container h1{
+		margin-top: 0;
+		margin-bottom: 10px;
+		position: relative;
+		color: #FFF;
+	}
+	.container h2{
+		color: #FFF;
+		font-weight: 100;
+		text-align: center;
+		margin: 0;
+	}
+	.engloba-servicos{
+		width: 80%;
+		margin: auto;
+	}
+	.cada-servico{
+		width: 25%;
+		float: left;
+		position: relative;
+		padding-top: 100px;
+	}
+	.cada-servico h4{
+		text-align: center;
+		color: #FFF;
+		font-weight: 400;
+		font-size: 20px;
+		position: relative;
+		z-index: 1;
+		margin-bottom: 0;
+	}
+	.cada-servico p{
+		text-align: center;
+		color: #FFF;
+		font-weight: 100;
+		position: relative;
+		z-index: 1;
+	}
+	.circle-servico{
+		width: 150px;
+		height: 150px;
+		border-radius: 100%;
+		border: solid 2px #FFF;
+		text-align: center;
+		font-size: 70px;
+		color: #FFF;
+		display: table;
+		margin: auto;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+	}
+	.circle-servico:hover{
+		background-color: rgba(255,255,255,.1);
+	}
+	.circle-servico i{
+		display: table-cell;
+    	vertical-align: middle;
+	}
+	.cada-portifolio{
+		height: 255px;
+		width: 45%;
+		float: left;
+		position: relative;
+		z-index: -1;
+		top: -190px;
+		overflow: hidden;
+		background-position: 50% 0;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	    transition: all 0.2s ease-in-out;
+	    cursor: pointer;
+	    margin-bottom: 10px;
+	}
+	.no-padding{ padding: 0 }
+</style>
+<body>
+<div class="bg-img bgParallax" data-speed="5"></div>
+<div class="foo"></div>
+<div class="container">
+	<h1 class="up">cacilds vidis</h1>
+	<h2>Atirei o pau no gatis, per gatis num morreus.</h2>
+	<div class="engloba-servicos">
+		<div class="cada-servico">
+			<div class="circle-servico">
+				<i class="fa fa-globe" aria-hidden="true"></i>
+			</div>
+			<h4>Mussum Ipsum</h4>
+			<p>Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. Manduma pindureta quium dia nois paga. </p>
+		</div>
+		<div class="cada-servico">
+			<div class="circle-servico">
+				<i class="fa fa-laptop" aria-hidden="true"></i>
+			</div>
+			<h4>Mussum Ipsum</h4>
+			<p>Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. Manduma pindureta quium dia nois paga. </p>
+		</div>
+		<div class="cada-servico">
+			<div class="circle-servico">
+				<i class="fa fa-gift" aria-hidden="true"></i>
+			</div>
+			<h4>Mussum Ipsum</h4>
+			<p>Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. Manduma pindureta quium dia nois paga. </p>
+		</div>
+		<div class="cada-servico">
+			<div class="circle-servico">
+				<i class="fa fa-mobile" aria-hidden="true"></i>
+			</div>
+			<h4>Mussum Ipsum</h4>
+			<p>Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. Manduma pindureta quium dia nois paga. </p>
+		</div>
+	</div>
+</div>
+<div class="noo"></div>
+
+<div class="noo-two bgParallax" data-speed="5">
+	<h1 class="up">cacilds vidis</h1>
+	<div class="separa-detalhe">
+		<div class="line left-detalhe"></div>
+		<i class="fa fa-heart" aria-hidden="true"></i>
+		<div class="line right-detalhe"></div>
+	</div>
+	<h2>Atirei o pau no gatis, per gatis num morreus.</h2>
+</div>
+<div class="noo-three"></div>
+<div class="container-two">
+	<div class="col-md-6 col-xs-6">
+		soakspokasopa
+	</div>
+	<div class="col-md-6 col-xs-6 no-padding">
+		<img src="http://hd.freewallpaper-s.net/wp-content/uploads/mixed/Home-office-macbook-air-iphone-glass-table-cool-2560x1440.jpg" alt="" class="img-responsive">
+	</div>
+</div>
+
+<div class="noo four"></div>
+<div class="container four"></div>
+</body>
+</html>
+<script type="text/javascript">
+	$('div.bgParallax').each(function(){
+		var $obj = $(this);
+	 
+		$(window).scroll(function() {
+			var yPos = -($(window).scrollTop() / $obj.data('speed')); 
+	 
+			var bgpos = '50% '+ yPos + 'px';
+	 
+			$obj.css('background-position', bgpos );
+	 
+		}); 
+	});
+</script>
